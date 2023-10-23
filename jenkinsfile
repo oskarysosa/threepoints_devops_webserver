@@ -1,25 +1,18 @@
 pipeline {
     agent any
-    
     stages {
         stage('Checkout') {
             steps {
-                // Descarga de código desde el repositorio Git
                 checkout scm
             }
         }
-        
         stage('Pruebas de SAST') {
             steps {
-                // Simulación de pruebas de calidad de código (SAST)
-                echo "Ejecución de pruebas de SAST"
+                echo "Ejecución de pruebas de SAST (simuladas)"
             }
         }
-        
         stage('Build') {
             steps {
-                // Construcción del contenedor Docker
                 sh 'docker build -t devops_ws .'
             }
         }
-    }
