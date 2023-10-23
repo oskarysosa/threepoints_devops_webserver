@@ -23,11 +23,3 @@ pipeline {
             }
         }
     }
-    
-    post {
-        success {
-            // Captura de pantalla con los resultados de SonarQube
-            // Puedes agregar aquí el paso para obtener y mostrar los resultados de SonarQube.
-        }
-    }
-}
